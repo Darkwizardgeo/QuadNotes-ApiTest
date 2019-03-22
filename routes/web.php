@@ -15,17 +15,15 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix' => 'api'], function () use ($router) {
-    $router->get('notes', 'NotesController@all');
+$router->get('notes', 'NotesController@all');
 
-    $router->post('notes', 'NotesController@add');
+$router->post('notes', 'NotesController@add');
 
-    $router->get('notes/{id}','NotesController@get');
+$router->get('notes/{id}','NotesController@get');
 
-    $router->put('notes/{id}','NotesController@put');
+$router->put('notes/{id}','NotesController@put');
 
-    $router->patch('notes/{id}', 'NotesController@patch');
+$router->patch('notes/{id}', 'NotesController@patch');
 
-    $router->delete('notes/{id}', 'NotesController@remove');
-});
+$router->delete('notes/{id}', 'NotesController@remove');
 
